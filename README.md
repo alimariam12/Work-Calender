@@ -3,7 +3,7 @@
 
 ### Task
 
-For this assignment, we need to make a simple work day schedule application. This would work by making a HTML and CSS that is operated by jQuery. In order for this application to work, we would also need to use Moment.js so we can work with the current time and date. 
+For this assignment, we need to make a simple work day schedule application. This would work by making a HTML and CSS that is operated by jQuery. In order for this application to work, we would also need to use `Moment.js` so we can work with the current time and date. 
 
 
 ### Installation
