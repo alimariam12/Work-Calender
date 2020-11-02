@@ -1,18 +1,23 @@
 $(document).ready(function(){
     $(currentDay).text(moment().format('MMMM Do YYYY'));
+
    
 //save hours to local storage
-$("#hour9 .description").val(localStorage.getItem("hour-9"));
-$("#hour10 .description").val(localStorage.getItem("hour-10"));
-$("#hour11 .description").val(localStorage.getItem("hour-11"));
-$("#hour12 .description").val(localStorage.getItem("hour-12"));
-$("#hour13 .description").val(localStorage.getItem("hour-13"));
-$("#hour14 .description").val(localStorage.getItem("hour-14"));
-$("#hour15 .description").val(localStorage.getItem("hour-15"));
-$("#hour16 .description").val(localStorage.getItem("hour-16"));
-$("#hour17 .description").val(localStorage.getItem("hour-17"));
+$("#hour9").val(localStorage.getItem("hour-9"));
+$("#hour10").val(localStorage.getItem("hour-10"));
+$("#hour11").val(localStorage.getItem("hour-11"));
+$("#hour12").val(localStorage.getItem("hour-12"));
+$("#hour13").val(localStorage.getItem("hour-13"));
+$("#hour14").val(localStorage.getItem("hour-14"));
+$("#hour15").val(localStorage.getItem("hour-15"));
+$("#hour16").val(localStorage.getItem("hour-16"));
+$("#hour17").val(localStorage.getItem("hour-17"));
 
-
+$(".saveBtn").on("click", function(){
+let timeBlock = $(this).parent().attr("id");
+let textArea = $(this).siblings(".description").val();
+localStorage.setItem(timeBlock, textArea); 
+});
 
 function trackTime (){
     let currentTime = moment().hours();
